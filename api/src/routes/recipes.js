@@ -7,7 +7,7 @@ const { API_KEY } = process.env;
 const router = Router();
 
 
-router.get('/', async (req, res, next) => {
+router.get('/', async (req, res) => {
     try {
         const { name } = req.query;
         let allRecipes = await getAllRecipes()    
@@ -45,7 +45,7 @@ router.get('/', async (req, res, next) => {
     }
 });
 
-router.get('/:id', async (req, res, next) => {    
+router.get('/:id', async (req, res) => {    
     const { id } = req.params  
     try {
         if (/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/.test(id)) {
