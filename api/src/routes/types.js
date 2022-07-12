@@ -16,7 +16,8 @@ router.get('/', async (req, res) => {
         const dietTypes = await Diet.findAll();
         res.send(dietTypes)
     } catch (error) {
-        next(error)
+        
+        res.status(400).send('invalid input');
     }
 })
 

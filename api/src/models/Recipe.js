@@ -18,15 +18,20 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    score: {
-      type: DataTypes.INTEGER
-    },
     healthScore: {
       type: DataTypes.INTEGER 
     },
+    dishtypes: {
+      type: DataTypes.STRING,
+    },
     steps: {
       type: DataTypes.STRING
-    }
+    },
+    createdInBd: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: true,
+  },
   
   });
 };

@@ -5,13 +5,12 @@ const { Recipe, Diet } = require('../db')
 
 const router = Router();
 
-router.post('/', async (req, res, next) => {
+router.post('/', async (req, res) => {
     try {
-        const { name, summary, score, healthScore, steps, dietTypes } = req.body
+        const { name, summary, healthScore, steps, dietTypes } = req.body
         const newRecipe = await Recipe.create({
             name,
             summary,
-            score,
             healthScore,
             steps,
         })
@@ -20,9 +19,12 @@ router.post('/', async (req, res, next) => {
             where: {name: dietTypes}
         })
         newRecipe.addDiet(dietTypesRecipeDb)
+
         res.status(200).send(newRecipe)  
+        
     } catch (error) {
-        next(error)
+
+        res.status(400).send('invalid input');
     };
 });
 

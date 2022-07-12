@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
                         image: e.image,
                         name: e.name,
                         dietTypes: e.dietTypes ? e.dietTypes : e.diets.map(e => e.name),
-                        score: e.score,
+                        healthScore: e.healthScore,
                         id: e.id
                     }
                 })
@@ -34,7 +34,7 @@ router.get('/', async (req, res) => {
                     image: e.image,
                     name: e.name,
                     dietTypes: e.dietTypes ? e.dietTypes : e.diets.map(e => e.name),
-                    score: e.score,
+                    healthScore: e.healthScore,
                     id: e.id
                 }
             })
@@ -46,13 +46,17 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/:id', async (req, res) => {    
-    const { id } = req.params  
+    const { id } = req.params
     try {
-        if (/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/.test(id)) {
-            let dbRecipesById = await getDbById(id);            
-            return res.status(200).json(dbRecipesById)
+        
+        if (id.length === 36) {
+            
+            let dbRecipesById = await getDbById(id); 
+           return res.status(200).json(dbRecipesById)
+
         } else { 
             apiRecipesById = await getApiById(id)
+            
             if (apiRecipesById.data.id) {
                 let recipeDetails =  {                    
                     image: apiRecipesById.data.image,
