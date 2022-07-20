@@ -20,9 +20,9 @@ export default function RecipeDetails(props) {
     
     return (
         
-        <div className="details" key={id}>            
+        <div className="dt" key={id}>            
                   
-            <div className="detailImg">
+            <div className="imga">
                 <img className="detailImg" 
                 src={recipeDetails.image ? 
                 recipeDetails.image : 
@@ -33,7 +33,7 @@ export default function RecipeDetails(props) {
 
             {recipeDetails.dishTypes ?
             <div className="ddsh">
-                <h2 className="texts">Dish Type: </h2>
+                <h2 className="texts">Dish Type : </h2>
                 {recipeDetails.dishTypes?.map(e => {
                     return(
                         <h2 className="dishesanddiets" key={e}>{e}</h2>

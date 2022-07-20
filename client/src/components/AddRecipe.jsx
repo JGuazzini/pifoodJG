@@ -101,7 +101,7 @@ export default function AddRecipe() {
         <div className="bkg">
             <h1 className="msg">Creat your own recipe!</h1>
             <form onSubmit={e => handleSubmit(e)}>
-                <div className="form">
+                <div className="form1">
                     <div className="container">
                         <div className="nameInput">
                             <label className="h1">Name:</label>

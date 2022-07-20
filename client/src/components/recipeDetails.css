@@ -1,89 +1,85 @@
 .dt {
   background-image: url('../icons/background1.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: rgb(12, 12, 12);
+  
 }
-/* .dt:hover{
-  cursor: pointer;
-    transform: scale(1.08);
-    transition: all 0.5s; */
-
 
 .imga {
-  height: 4cm;
-  width: 6cm;
-  border-radius: 20px;
-  box-shadow: 4px 4px 10px 10px rgba(8, 8, 8, 0.597);
+  
+  display: flex;
+  padding-left: 15px;
+  
+
 }
 
-.type {
-  background: #800080;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #ffc0cb, #800080);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #ffc0cb, #800080);
-  border-radius: 20px;
-  padding: 10px;
-  box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.486);
-  font-family: italic;
+.detailImg {
+  box-shadow: 4px 4px 10px 10px rgba(8, 8, 8, 0.597);
+  border-radius: 15px;
 }
 
 .title {
-  color: #fff;
-  background: #800080;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #ffc0cb, #800080);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #ffc0cb, #800080);
-  border-radius: 20px;
-  padding: 10px;
-  box-shadow: 4px 4px 10px 10px rgb(217, 4, 255);
+  background-color: rgb(166, 166, 177);
+  box-shadow: 4px 4px 10px 10px rgb(12, 10, 12);
   font-family: italic;
-
+  padding-left: 15px;
 }
 
-.btn {
-  -webkit-border-radius: 10;
-  -moz-border-radius: 10;
-  border-radius: 10px;
-  font-family: italic;
-  color: #fffafa;
-  font-size: 17px;
-  background: #c300ff;
-  padding: 10px 30px 10px 30px;
-  text-decoration: none;
+.ddsh {
+  display: flex;
+  padding-left: 15px;
+  background-color: rgb(166, 166, 177);
 }
 
-.btn:hover {
-  background: #f2f2b1;
-  background: #800080;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #ffc0cb, #800080);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #ffc0cb, #800080);
-  text-decoration: none;
-  cursor: pointer;
-}
+.backButton {
+  justify-content: center;
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(100, 61, 136);
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+         0 0 4em 1em var(--glow-spread-color),
+         inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+  }
+  
+  .backButton::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
 
-.type3 {
-  background: #800080;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #ffc0cb, #800080);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #ffc0cb, #800080);
-  border-radius: 20px;
-  padding: 10px;
-  box-shadow: 4px 4px 10px 10px rgba(255, 0, 255, 0.991);
-  font-family: italic;
-}
+
+  .backButton:hover {
+     
+    color: var(--btn-color);
+ background-color: var(--glow-color);
+ box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+
+  }
+
+  .backButton:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+   }
+
+
