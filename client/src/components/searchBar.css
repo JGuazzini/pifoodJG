@@ -1,0 +1,10 @@
+.search {
+    text-shadow: 0 0 50px #fff, 0 0 40px #fff, 0 0 30px #f8bff0, 0 0 40px #fdbef5,
+    0 0 50px #f9bff0, 0 0 70px #fdc3fd, 0 0 70px #f9b6f3;
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+

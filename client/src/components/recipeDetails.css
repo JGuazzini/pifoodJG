@@ -1,0 +1,89 @@
+.dt {
+  background-image: url('../icons/background1.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(12, 12, 12);
+}
+/* .dt:hover{
+  cursor: pointer;
+    transform: scale(1.08);
+    transition: all 0.5s; */
+
+
+.imga {
+  height: 4cm;
+  width: 6cm;
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px 10px rgba(8, 8, 8, 0.597);
+}
+
+.type {
+  background: #800080;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #ffc0cb, #800080);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ffc0cb, #800080);
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 4px 4px 10px 10px rgba(0, 0, 0, 0.486);
+  font-family: italic;
+}
+
+.title {
+  color: #fff;
+  background: #800080;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #ffc0cb, #800080);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ffc0cb, #800080);
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 4px 4px 10px 10px rgb(217, 4, 255);
+  font-family: italic;
+
+}
+
+.btn {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  font-family: italic;
+  color: #fffafa;
+  font-size: 17px;
+  background: #c300ff;
+  padding: 10px 30px 10px 30px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #f2f2b1;
+  background: #800080;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #ffc0cb, #800080);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ffc0cb, #800080);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.type3 {
+  background: #800080;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #ffc0cb, #800080);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ffc0cb, #800080);
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 4px 4px 10px 10px rgba(255, 0, 255, 0.991);
+  font-family: italic;
+}

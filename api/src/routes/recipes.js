@@ -64,7 +64,6 @@ router.get('/:id', async (req, res) => {
                     dishTypes: apiRecipesById.data.dishTypes,
                     dietTypes: apiRecipesById.data.diets,
                     summary: apiRecipesById.data.summary,
-                    score: apiRecipesById.data.spoonacularScore,
                     healthScore: apiRecipesById.data.healthScore,
                     steps: apiRecipesById.data.analyzedInstructions[0]?.steps.map(e => {
                         return {

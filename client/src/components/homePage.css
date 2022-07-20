@@ -1,0 +1,151 @@
+.home {
+    background-image: url('../icons/background.jpg');
+    background-size: cover;
+    justify-content: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+   
+}
+
+/* From uiverse.io by @menezes11 */
+.btn1 {
+    position: relative;
+    justify-content: center;
+    padding: 1em 1.8em;
+    outline: none;
+    border: 1px solid #303030;
+    background: #212121;
+    color: #ae00ff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+   }
+   
+   .btn1:hover {
+    box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
+    transition-delay: 0.6s;
+   }
+   
+   .btn1 span {
+    position: absolute;
+   }
+   
+   .btn1 span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ae00ff);
+   }
+   
+   .btn1:hover span:nth-child(1) {
+    left: 100%;
+    transition: 0.7s;
+   }
+   
+   .btn1 span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #001eff);
+   }
+   
+   .btn1:hover span:nth-child(3) {
+    right: 100%;
+    transition: 0.7s;
+    transition-delay: 0.35s;
+   }
+   
+   .btn1 span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ae00ff);
+   }
+   
+   .btn1:hover span:nth-child(2) {
+    top: 100%;
+    transition: 0.7s;
+    transition-delay: 0.17s;
+   }
+   
+   .btn1 span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #001eff);
+   }
+   
+   .btn1:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 0.7s;
+    transition-delay: 0.52s;
+   }
+   
+   .btn1:active {
+    background: #ae00af;
+    background: linear-gradient(to top right, #ae00af, #001eff);
+    color: #bfbfbf;
+    box-shadow: 0 0 8px #ae00ff, 0 0 8px #001eff, 0 0 8px #ae00ff;
+    transition: 0.1s;
+   }
+   
+   .btn1:active span:nth-child(1) 
+   span:nth-child(2) 
+   span:nth-child(2) 
+   span:nth-child(2) {
+    transition: none;
+    transition-delay: none;
+   }
+  
+
+.initialMsg {
+    font-size: 3rem;
+  text-shadow: 0 0 20px #fff, 0 0 20px #fff, 0 0 20px #4864c0, 0 0 20px #4170ae,
+  0 0 20px #4d122f, 0 0 30px #480929, 0 0 30px #390a21;
+  font-size: 23px;
+    color: rgb(0, 0, 0);
+    font-style: groove;
+    position:relative;
+    font-size: 60px;
+    padding-left: 8px;
+    background: #413d40;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #968d96, #87737d);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #676768, #727272); 
+    box-shadow: #a16381;
+}
+
+
+.select {
+    text-shadow: 0 0 30px #fff, 0 0 40px #fff, 0 0 30px #140f14, 0 0 40px #212121,
+    0 0 50px #212121, 0 0 70px #212121, 0 0 70px #212121;
+    
+    color: rgb(192, 22, 198);
+    background: #212121;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #ffc0cb, #d4d4d4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #212121, #212121); 
+    cursor: pointer;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    border-style: groove;
+}
+
+.bonotes {
+    display: flex;
+    justify-content: center;
+}
