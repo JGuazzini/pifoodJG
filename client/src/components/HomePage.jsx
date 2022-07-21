@@ -13,7 +13,7 @@ import Pagination from "./Pagination";
 import SearchBar from "./SearchBar";
 import './homePage.css';
 import './searchBar.css';
-import './pagination.css';
+import './recipe.css';
 
 
 let prevId = 1;
@@ -22,10 +22,10 @@ export default function Home() {
   const dispatch = useDispatch();
   const allRecipes = useSelector((state) => state.recipes);
 
-  const [order, setOrder] = useState("");
+  const [/*order*/, setOrder] = useState("");
 
   const [page, setPage] = useState(1);
-  const [recipesPage, setRecipesPage] = useState(9);
+  const [recipesPage, /*setRecipesPage*/] = useState(9);
 
   const quantityRecipesPage = page * recipesPage;
   const firstRecipePage = quantityRecipesPage - recipesPage;
@@ -69,8 +69,13 @@ export default function Home() {
   }
 
   return (
-    <div className="home">
+    <div className="homep">
       <h1 className="initialMsg">All kinds of recipes available for you!</h1>
+      <div>
+        <SearchBar 
+          setPage={setPage}
+        />
+      </div>
       <div className="bonotes">
         <button className="btn1" onClick={handleClick}>
           Refresh recipes
@@ -79,7 +84,7 @@ export default function Home() {
           <button className="btn1">Add new recipe</button>
         </Link>
       </div>
-      <div className="select">
+      <div className="selecth">
         <label className="filters">Sort:</label>
         <select
           className="select"
@@ -121,6 +126,7 @@ export default function Home() {
           <option value="dairy free">Dairy Free</option>
         </select>
       </div>
+      
 
       <Pagination
         recipesPage={recipesPage}
@@ -128,35 +134,33 @@ export default function Home() {
         pagination={pagination}
       />
 
-      <SearchBar />
 
       <div className="allrecipes">
         {showRecipesPage?.map((e) => {
           return (
-            <div className="eachRecipe" key={prevId++}>
+            <div  key={prevId++}>
               <Link className="linkRecetas" to={`home/${e.id}`}>
                 {" "}
                 click{" "}
               </Link>
-              <Recipe
-                image={
-                  e.image
-                    ? e.image
-                    : "https://images.unsplash.com/photo-1635321593217-40050ad13c74?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1748&q=80"
-                }
-                name={e.name}
-                dietTypes={e.dietTypes}
+              
+              <Recipe 
+                  image={
+                    e.image
+                      //? e.image
+                      //: "https://images.unsplash.com/photo-1635321593217-40050ad13c74?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1748&q=80"
+                      
+                  }
+                  name={e.name}
+                  dietTypes={e.dietTypes}
               />
+                
             </div>
           );
         })}
       </div>
 
-      <Pagination
-        recipesPage={recipesPage}
-        allRecipes={allRecipes.length}
-        pagination={pagination}
-      />
+      
     </div>
   );
 }

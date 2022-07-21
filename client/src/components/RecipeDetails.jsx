@@ -20,7 +20,7 @@ export default function RecipeDetails(props) {
     
     return (
         
-        <div className="dt" key={id}>            
+        <div className="dtt" key={id}>            
                   
             <div className="imga">
                 <img className="detailImg" 

@@ -6,26 +6,20 @@ import './searchBar.css';
 
 
 
-export default function SearchBar() {
+export default function SearchBar({setPage}) {
     const dispatch = useDispatch();
     const [input, setInput] = useState('');
 
     function handleChange(e) {    
-        e.preventDefault();    
         setInput(e.target.value);
     };
-
+    
     function handleSubmit(e) {
-       
-        try {
-            dispatch(getRecipesByName(input));
-            
-        } catch (error) {            
-            return error;
-        }
-
-        setInput('')
         
+        e.preventDefault();    
+        setPage(1)
+        dispatch(getRecipesByName(input));
+        setInput("")
     };
 
    

@@ -12,15 +12,14 @@ import {
 
 
 export function getRecipes() {
-    return function (dispatch) {
-      axios
-        .get(`${LOCAL_HOST}/recipes`)
-        .then((response) => {
-          return dispatch({ type: GET_RECIPES, payload: response.data });
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+    return  async function (dispatch) {
+      try {
+        var response = await axios.get(`${LOCAL_HOST}/recipes`)
+        return dispatch({ type: GET_RECIPES, payload: response.data })
+      } catch {
+        return alert("Recipe Not Found");
+      }
+      
     };
 }
 

@@ -3,7 +3,7 @@ import HomePage from './components/HomePage';
 import LandingPage from './components/LandingPage';
 import AddRecipe from './components/AddRecipe';
 import RecipeDetails from './components/RecipeDetails';
-
+import './App.css';
 
 
 

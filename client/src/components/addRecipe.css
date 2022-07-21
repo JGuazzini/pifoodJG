@@ -1,8 +1,13 @@
 .bkg{
-    background-image: url('../icons/background1.png');
-    background-size: cover;
- 
-    
+  background-image: url('../icons/background1.png');
+  background-size: cover;
+  justify-content: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .msg {
@@ -15,9 +20,153 @@
 .form1 {
   display:grid;
   justify-content: center;
+  
 }
 
 .container {
-  display: flex;
+  display:contents;
   justify-content: center;
+  
+  width: auto;
 }
+
+
+.nameInput {
+  
+  display:grid;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 4px 4px 5px 5px rgb(12, 10, 12);
+  padding-top: 5px;
+  width: 100%;
+  margin: 15px;
+
+}
+
+.h1 {
+  display: flex;
+  justify-content:center;
+  background-color: antiquewhite;
+  font-size: large;
+  margin-bottom: 5px;
+  
+}
+
+
+
+.checkSelect {
+  display:grid;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 4px 4px 5px 5px rgb(12, 10, 12);
+  padding-top: 5px;
+  width: auto;
+  margin: 15px;
+}
+
+.msgs {
+  display: flex;
+  justify-content:center;
+  background-color: antiquewhite;
+  font-size: large;
+}
+
+.btnadd {
+  position: relative;
+  display: inline;
+  justify-content: center;
+  padding: 1em 1.8em;
+  margin-left: 500px;
+  outline: none;
+  border: 1px solid #303030;
+  background: #212121;
+  color: #ae00ff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  /* overflow: hidden; */
+  transition: 0.2s;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+ }
+ 
+ .btnadd:hover {
+  box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
+  transition-delay: 0.6s;
+ }
+ 
+ .btnadd span {
+  position: absolute;
+ }
+ 
+ .btnadd span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ae00ff);
+ }
+ 
+ .btnadd:hover span:nth-child(1) {
+  left: 100%;
+  transition: 0.7s;
+ }
+ 
+ .btnadd span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #001eff);
+ }
+ 
+ .btnadd:hover span:nth-child(3) {
+  right: 100%;
+  transition: 0.7s;
+  transition-delay: 0.35s;
+ }
+ 
+ .btnadd span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #ae00ff);
+ }
+ 
+ .btnadd:hover span:nth-child(2) {
+  top: 100%;
+  transition: 0.7s;
+  transition-delay: 0.17s;
+ }
+ 
+ .btnadd span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #001eff);
+ }
+ 
+ .btnadd:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 0.7s;
+  transition-delay: 0.52s;
+ }
+ 
+ .btnadd:active {
+  background: #ae00af;
+  background: linear-gradient(to top right, #ae00af, #001eff);
+  color: #bfbfbf;
+  box-shadow: 0 0 8px #ae00ff, 0 0 8px #001eff, 0 0 8px #ae00ff;
+  transition: 0.1s;
+ }
+ 
+ .btnadd:active span:nth-child(1) 
+ span:nth-child(2) 
+ span:nth-child(2) 
+ span:nth-child(2) {
+  transition: none;
+  transition-delay: none;
+ }

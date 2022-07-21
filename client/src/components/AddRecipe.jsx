@@ -9,10 +9,10 @@ import './addRecipe.css';
 
 function validate(input) {
     const errors = {};
-    if (!input.name) errors.name = 'Please complete with a recipe name';
-    if (!input.summary) errors.summary = 'Please add some comments about your recipe';
-    if (input.healthScore < 1 || input.healthScore > 100) errors.healthScore = 'The score must be a number between 1 and 100';
-    if (!input.steps.length) errors.steps = 'Please detail the steps for your recipe';
+    if (!input.name) errors.name = 'Complete with a recipe name';
+    if (!input.summary) errors.summary = 'Add some comments about your recipe';
+    if (input.healthScore < 1 || input.healthScore > 100) errors.healthScore = 'Only numbers between 1 and 100';
+    if (!input.steps.length) errors.steps = 'Detail the steps for your recipe';
     if (!input.dietTypes.length) errors.dietTypes = 'You must select at least one diet type';
     return errors;
 };
@@ -105,14 +105,14 @@ export default function AddRecipe() {
                     <div className="container">
                         <div className="nameInput">
                             <label className="h1">Name:</label>
-                            <input className="inputs" name="name" type="text" value={input.name} onChange={e => handleChange(e)}/>
+                            <input className="inputname" name="name" type="text" value={input.name} onChange={e => handleChange(e)}/>
                             {errors.name && (
                                 <span className="errors">{errors.name}</span>
                             )}
                         </div>
                         <div className="nameInput">
                             <label className="h1">Summary:</label>
-                            <textarea name="summary" type="text" rows="4" cols="30" value={input.summary} onChange={e => handleChange(e)}/>
+                            <textarea className="inputsum" name="summary" type="text" rows="4" cols="30" value={input.summary} onChange={e => handleChange(e)}/>
                             {errors.summary && (
                                 <span className="errors">{errors.summary}</span>
                             )}
@@ -120,14 +120,14 @@ export default function AddRecipe() {
                     
                         <div className="nameInput">
                             <label className="h1">Health Score:</label>
-                            <input name="healthScore" type="number" value={input.healthScore} onChange={e => handleChange(e)}/>
+                            <input className="inputhealt" name="healthScore" type="number" value={input.healthScore} onChange={e => handleChange(e)}/>
                             {errors.healthScore && (
                                 <span className="errors">{errors.healthScore}</span>
                             )}
                         </div>
                         <div className="nameInput">
                             <label className="h1">Steps:</label>
-                            <textarea name="steps" type="text" rows="4" cols="40" value={input.steps} onChange={e => handleChange(e)}/>
+                            <textarea className="inputstep" name="steps" type="text" rows="4" cols="40" value={input.steps} onChange={e => handleChange(e)}/>
                             {errors.steps && (
                                 <span className="errors">{errors.steps}</span>
                             )}

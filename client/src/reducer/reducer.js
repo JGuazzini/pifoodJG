@@ -47,13 +47,13 @@ export default function rootReducer(state = initialState, action) {
           let sortedRecipesByScore = [...state.recipes] 
           sortedRecipesByScore = action.payload === 'asc' ?
           state.recipes.sort(function(a, b) {
-            if (a.score > b.score) return 1;
-            if (a.score < b.score) return -1;
+            if (a.healthScore > b.healthScore) return 1;
+            if (a.healthScore < b.healthScore) return -1;
             return 0;
           }) :
           state.recipes.sort(function(a, b) {
-            if (a.score < b.score) return 1;
-            if (a.score > b.score) return -1;
+            if (a.healthScore < b.healthScore) return 1;
+            if (a.healthScore > b.healthScore) return -1;
             return 0;
           });
           return {
